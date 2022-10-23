@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Task Tracker App</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100"
+      rel="stylesheet"
+    />
+    <link href="/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Today's Plan</h1>
+      <form action="/addtask" method="POST">
+        <input type="text" name="newtask" placeholder="add new task" />
+        <button>Add Task</button>
+        <h2>Added Task</h2>
+        <% for( var i = 0; i < task.length; i++){ %>
+        <div class="task">
+          <input type="text" name="check" value="<%= task[i].task %>" />
+          <!-- <%= task[i].task %> -->
+          <!-- if I want to edit make type = "text" and value ="<%= task[i].task %>" and think about how to work with readonly="readonly" -->
+          <button
+            class="edit"
+            formaction="/edittask/<%=task[i].id%>"
+            type="submit"
+          >
+            Edit
+          </button>
+          <button formaction="/removetask/<%=task[i].id%>" type="submit">
+            Remove
+          </button>
+        </div>
+        <% } %>
+        <!-- Makes more than one task appear -->
+      </form>
+    </div>
+  </body>
+</html>
