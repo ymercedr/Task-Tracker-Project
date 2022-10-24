@@ -1,0 +1,76 @@
+body {
+  background-color: #679186;
+}
+
+.container {
+  padding: 100px;
+  text-align: center;
+}
+
+.newtask {
+  background-color: #bbd4ce;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 50px;
+  width: 390px;
+}
+
+.task input {
+  background-color: #bbd4ce;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  width: 300px;
+}
+
+button {
+  background-color: #f9b4ab;
+  color: #264e70;
+  border-color: #264e70;
+  padding: 8px;
+  font-size: 20px;
+  margin: 5px;
+}
+
+h1 {
+  color: #fdebd3;
+  font-size: 50px;
+}
+
+h2 {
+  color: #fdebd3;
+  font-size: 42px;
+}
+
+/* Media Querys */
+
+/* Mobile */
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 10px;
+  }
+  .newtask {
+    margin-bottom: 10px;
+  }
+  .newtask input {
+    padding: 10px;
+    width: 380px;
+  }
+  h2 {
+    margin-top: 70px;
+  }
+  .task input {
+    padding: 10px;
+    width: 360px;
+  }
+
+  .task {
+    margin: 15px;
+  }
+
+  .task button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

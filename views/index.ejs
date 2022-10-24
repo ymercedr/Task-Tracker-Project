@@ -1,24 +1,26 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Tracker App</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100"
-      rel="stylesheet"
-    />
-    <link href="/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Today's Plan</h1>
       <form action="/addtask" method="POST">
-        <input type="text" name="newtask" placeholder="add new task" />
+        <input
+          class="newtask"
+          type="text"
+          name="newtask"
+          placeholder="What do I need to do?"
+        />
         <button>Add Task</button>
-        <h2>Added Task</h2>
+        <h2>To Do:</h2>
+        <!-- JS in order to create a new task-->
         <% for( var i = 0; i < task.length; i++){ %>
         <div class="task">
+          <!-- Displaying the newtask task[i], .task displaying only the "task:" part of the JSON object -->
           <input type="text" name="check" value="<%= task[i].task %>" />
-          <!-- <%= task[i].task %> -->
-          <!-- if I want to edit make type = "text" and value ="<%= task[i].task %>" and think about how to work with readonly="readonly" -->
           <button
             class="edit"
             formaction="/edittask/<%=task[i].id%>"
@@ -30,8 +32,8 @@
             Remove
           </button>
         </div>
-        <% } %>
         <!-- Makes more than one task appear -->
+        <% } %>
       </form>
     </div>
   </body>
