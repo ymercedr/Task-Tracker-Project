@@ -98,7 +98,7 @@ app.post("/edittask/:id", function (req, res) {
   if (editTask == undefined)
     return res.status(404).send("The task with the given ID was not found.");
 
-  //selecting the new input for the task
+  //selecting the new input for the task by using it's index in the array
   let editedTask = req.body.check[editTask];
   // console.log(editedTask);
   //add edited task to as a new task
