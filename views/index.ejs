@@ -1,5 +1,6 @@
 <html>
   <head>
+    <!-- Without this my media queries wouldn't work -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Tracker App</title>
     <link rel="stylesheet" href="css/style.css" />
@@ -17,8 +18,10 @@
         <button>Add Task</button>
         <h2>To Do:</h2>
         <!-- JS in order to create a new task-->
+        <!-- Any JS logic written between template tags will not be displayed -->
         <% for( var i = 0; i < task.length; i++){ %>
         <div class="task">
+          <!-- The "=" sign after the template tag  is what makes the expression within the brackets an output-->
           <!-- Displaying the newtask task[i], .task displaying only the "task:" part of the JSON object -->
           <input type="text" name="check" value="<%= task[i].task %>" />
           <button
@@ -31,8 +34,8 @@
           <button formaction="/removetask/<%=task[i].id%>" type="submit">
             Remove
           </button>
+          <!-- Makes more than one task appear -->
         </div>
-        <!-- Makes more than one task appear -->
         <% } %>
       </form>
     </div>

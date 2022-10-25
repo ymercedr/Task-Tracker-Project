@@ -1,5 +1,7 @@
 [
-  { "task": "Sweep Floors", "id": 3 },
-  { "task": "Vacuum", "id": 4 },
-  { "task": "Clean Room ", "id": 5 }
+  { "task": "Clean Room", "id": 1 },
+  { "task": "Car Wash", "id": 2 },
+  { "task": "Vacuum", "id": 3 },
+  { "task": "Sweep Floors", "id": 4 },
+  { "task": "Laundry", "id": 5 }
 ]

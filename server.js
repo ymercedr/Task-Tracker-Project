@@ -1,12 +1,23 @@
 import fs from "fs";
 import express from "express";
+//allows you to access req.body from within routes and use that data
 import bodyParser from "body-parser";
 
 const port = 5300;
 const app = express();
 
+//what template engine is used
 app.set("view engine", "ejs");
+//views folder: the directory where the template files are located
+
+//to serve static files such as images, CSS files, and JavaScript files
+//call the express.static middleware function
+//used so that it reads the style.css file
 app.use(express.static("public"));
+
+//transforms the text-based JSON input into JS-accessible for URL-encoded requests
+//extended: true precises that the req.body object will contain values of any type instead of just strings.
+//this allows the new task inouts to be read and displayed later on
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //reading and parsing JSON file in order to be displayed

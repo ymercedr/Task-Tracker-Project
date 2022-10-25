@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  padding: 100px;
+  padding: 80px;
   text-align: center;
 }
 
@@ -26,8 +26,8 @@ body {
 
 button {
   background-color: #f9b4ab;
-  color: #264e70;
-  border-color: #264e70;
+  /* color: #264e70;
+  border-color: #264e70; */
   padding: 8px;
   font-size: 20px;
   margin: 5px;
@@ -72,5 +72,11 @@ h2 {
   .task button {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+  button {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 45px;
   }
 }
